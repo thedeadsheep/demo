@@ -20,6 +20,11 @@ const typeDefs = gql`
         product_Deses: [ProductDes]
         product_Des(id: ID!): ProductDes
     }
+
+    type Mutation {
+        createProduct(id: ID!, name: String, color: String, price: Int): Product
+        createProductDes(id: ID!, productID: ID!, phone_description: String): ProductDes
+    }
 `
 
 module.exports = typeDefs
